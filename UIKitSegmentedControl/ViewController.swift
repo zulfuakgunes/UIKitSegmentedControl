@@ -17,6 +17,15 @@ class ViewController: UIViewController {
         view.addSubview(segmentedControl)
         return segmentedControl
     }()
+    
+    lazy var homeTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +48,34 @@ class ViewController: UIViewController {
                     equalTo: view.leadingAnchor),
                 homeSegmentedControl.trailingAnchor.constraint(
                     equalTo: view.trailingAnchor),
-             homeSegmentedControl.heightAnchor.constraint(equalToConstant: 10)
+             homeSegmentedControl.heightAnchor.constraint(equalToConstant: 50),
+             
+             
+             homeTableView.topAnchor.constraint(equalTo: homeSegmentedControl.bottomAnchor, constant: -30),
+             homeTableView.leadingAnchor.constraint(
+                 equalTo: view.leadingAnchor),
+             homeTableView.trailingAnchor.constraint(
+                 equalTo: view.trailingAnchor),
+             homeTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ]
         )
     }
 
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    // MARK: - UITableViewDataSource
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            // Burada satır sayısını döndürün
+            return 10 // Örnek olarak 10 satır
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            // Hücre oluşturma ve yapılandırma
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = "Satır \(indexPath.row)"
+            return cell
+        }
 }
 
 #Preview{
