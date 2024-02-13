@@ -12,6 +12,10 @@
 		6A00EDE52B7A9298004DFC78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A00EDE42B7A9298004DFC78 /* ViewController.swift */; };
 		6A00EDEA2B7A9299004DFC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A00EDE92B7A9299004DFC78 /* Assets.xcassets */; };
 		6A00EDED2B7A9299004DFC78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A00EDEB2B7A9299004DFC78 /* LaunchScreen.storyboard */; };
+		6A3EF2C62B7B64D000A4FFFA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3EF2C52B7B64D000A4FFFA /* HomeViewModel.swift */; };
+		6A3EF2C82B7B66A200A4FFFA /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3EF2C72B7B66A200A4FFFA /* Posts.swift */; };
+		6A3EF2CB2B7B7FB400A4FFFA /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3EF2CA2B7B7FB400A4FFFA /* Todos.swift */; };
+		6A3EF2CD2B7B801500A4FFFA /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3EF2CC2B7B801500A4FFFA /* Albums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		6A00EDE92B7A9299004DFC78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A00EDEC2B7A9299004DFC78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A00EDEE2B7A9299004DFC78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A3EF2C52B7B64D000A4FFFA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		6A3EF2C72B7B66A200A4FFFA /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		6A3EF2CA2B7B7FB400A4FFFA /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
+		6A3EF2CC2B7B801500A4FFFA /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,42 @@
 		6A00EDDF2B7A9298004DFC78 /* UIKitSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
+				6A35FC782B7C07DB008DAFB5 /* ViewControllers */,
+				6A35FC752B7C07A9008DAFB5 /* Models */,
 				6A00EDE02B7A9298004DFC78 /* AppDelegate.swift */,
 				6A00EDE22B7A9298004DFC78 /* SceneDelegate.swift */,
-				6A00EDE42B7A9298004DFC78 /* ViewController.swift */,
 				6A00EDE92B7A9299004DFC78 /* Assets.xcassets */,
 				6A00EDEB2B7A9299004DFC78 /* LaunchScreen.storyboard */,
 				6A00EDEE2B7A9299004DFC78 /* Info.plist */,
 			);
 			path = UIKitSegmentedControl;
+			sourceTree = "<group>";
+		};
+		6A35FC752B7C07A9008DAFB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A3EF2C72B7B66A200A4FFFA /* Posts.swift */,
+				6A3EF2CA2B7B7FB400A4FFFA /* Todos.swift */,
+				6A3EF2CC2B7B801500A4FFFA /* Albums.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6A35FC782B7C07DB008DAFB5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A35FC792B7C07E5008DAFB5 /* Home */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6A35FC792B7C07E5008DAFB5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6A00EDE42B7A9298004DFC78 /* ViewController.swift */,
+				6A3EF2C52B7B64D000A4FFFA /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +172,11 @@
 			files = (
 				6A00EDE52B7A9298004DFC78 /* ViewController.swift in Sources */,
 				6A00EDE12B7A9298004DFC78 /* AppDelegate.swift in Sources */,
+				6A3EF2C82B7B66A200A4FFFA /* Posts.swift in Sources */,
 				6A00EDE32B7A9298004DFC78 /* SceneDelegate.swift in Sources */,
+				6A3EF2CD2B7B801500A4FFFA /* Albums.swift in Sources */,
+				6A3EF2C62B7B64D000A4FFFA /* HomeViewModel.swift in Sources */,
+				6A3EF2CB2B7B7FB400A4FFFA /* Todos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
