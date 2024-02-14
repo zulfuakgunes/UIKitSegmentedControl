@@ -15,17 +15,29 @@ protocol HomeViewModelProtocol {
     func fetchPosts()
     func fetchToDos()
     func fetchAlbums()
-    func changeSegmentedControl()
+    func changeSegmentedControl(at index: Int)
 }
 
 class HomeViewModel: HomeViewModelProtocol {
+    
     weak var delegate: HomeViewDelegate?
     
     var posts: [Posts] = []
-    var todos: [Todos] = []    
+    var todos: [Todos] = []
     var albums: [Albums] = []
-
-
+    
+    func changeSegmentedControl(at index: Int) {
+        switch index {
+        case 0:
+            fetchPosts()
+        case 1:
+            fetchToDos()
+        case 2:
+            fetchAlbums()
+        default:
+            break
+        }
+    }
     
     func fetchPosts() {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
@@ -86,5 +98,6 @@ class HomeViewModel: HomeViewModelProtocol {
             
         }.resume()
     }
+    
     
 }
