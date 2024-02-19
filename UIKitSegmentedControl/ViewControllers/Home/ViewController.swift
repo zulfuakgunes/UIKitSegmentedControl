@@ -49,8 +49,7 @@ class ViewController: UIViewController {
         case 0:
             viewModel.fetchPosts()
         case 1:
-            viewModel.fetchToDos()
-        case 2:
+            viewModel.fetchTo        case 2:
             viewModel.fetchAlbums()
         default:
             break
